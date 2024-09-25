@@ -4,6 +4,10 @@ import requests
 def send_telegram_chat(msg):
     telegram_bot_secret = os.getenv("TELEGRAM_BOT_SECRET")
     telegram_chat_id = os.getenv("TELEGRAM_CHAT_ID")
+
+     # Debugging: Print values to verify they're fetched correctly
+    print(f"Telegram Bot Secret: {telegram_bot_secret}")
+    print(f"Telegram Chat ID: {telegram_chat_id}")
     
     # Ensure the secrets are fetched correctly
     if not telegram_bot_secret or not telegram_chat_id:
